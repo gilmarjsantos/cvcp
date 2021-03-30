@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Enviar Documentos</title>
+
+<!-- <link href="css/upload.css" rel="stylesheet" type="text/css"> -->
+<script type="text/javascript" src="js/upload.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/upload.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container">
+    <input name="arquivo" id="arquivo" type="file" />
+    
+    <input type="hidden" name="foto_nome" id="foto_nome" />
+	                 <!-- AREA DA FOTO   -->                      
+<div id="area_foto">
+          <table width="50%" border="0" align="center">
+              <tr>
+              <td><!-- Enviar Cópia do CLRV / Documentos: --></td>
+              </tr> 
+          <tr>
+              <td>
+            <div id="foto" class="margem-topo">
+               <div align="center"><img name="exibeFoto" id="exibeFoto"></div>
+             </div>   
+              </td>
+          </tr>
+          <tr>
+              <td>
+		<!-- 	  <div align="center" id="botaofotodocrlv">
+              <label>
+              <button type="button" name="btnenviaclrv" id="btnenviaclrv" onClick="abrirGaleria()">Enviar Foto do CLRV/Documentos</button>
+              </label>
+			  </div> --> 
+              </td>
+          </tr>
+          <tr>
+              <td> <!-- 
+			  <div align="center" id="botaoenviarocrlv">
+              <button type="button" data-icon="check" id="btnUpload" onClick="upload()" style="width:90%; margin-left: auto;margin-right: auto">Enviar Foto</button>
+			  </div> -->
+              </td>
+          </tr>
+          </table>
+</div>
+                   <!-- AREA DA FOTO   -->
+	
+	<button type="button" data-icon="check" name="btn515" id="btn515" onClick="galeriaSucesso()" style="width:90%; margin-left: auto;margin-right: auto">Enviar Foto</button>
+   <!--  <button>Enviar</button>  -->
+</form>
+</div>
+
+       <script src="cordova.js"></script>
+
+</body>
+</html>

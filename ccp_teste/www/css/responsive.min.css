@@ -1,0 +1,536 @@
+/* #####################################
+########################################
+
+	Theme name: Prefeitura Municipal de Pindamonhangaba
+	Theme URI: http://acgweb.com.br
+	Description: Este tema foi desenvolvido exclusivamente para a prefeitura de Pindamonhangaba.
+
+	Code: Gabriel Amarante | ACG Web Design
+	Author: Verge Studio
+	Author URI: http://vergestudio.com.br
+
+	Version: 22.06.2018
+
+########################################
+##################################### */
+
+
+@media (max-width: 1599px) {
+
+	/* ######
+	   CABEÇALHO
+	############ */
+
+}
+
+
+@media (max-width: 1199px) {
+
+	/* ######
+	   PÁGINA INICIAL | CONTEÚDO
+	############ */
+
+	/* box-service */
+
+	.home #site-content .box-service .box-link a {
+		min-height: 105px;
+	}
+	.home #site-content .box-service .box-link h3 {
+		font-size: 1.563rem;
+	}
+
+	/* box-news */
+
+	.home #site-content .box-news {
+		min-height: 410px;
+	}
+	.home #site-content .box-news p {
+		margin: 0 0 15px;
+	}
+
+	.home #site-content .box-news .box-featured {
+		margin: 0 0 50px;
+	}
+	.home #site-content .box-news .box-featured h2 {
+		font-size: 1.563rem;
+		line-height: 1.875rem;
+	}
+
+	/* box-info */
+
+	.home #site-content .box-info h2 {
+		font-size: 1.375rem;
+		line-height: 1.75rem;
+	}
+
+	/* ######
+	   PÁGINA INFRAESTRUTURA | CONTEÚDO
+	############ */
+
+	/* bx-info */
+
+	.page-infraestrutura #site-content .bx-info h3 {
+		font-size: 1.563rem;
+	}
+
+}
+
+
+@media (max-width: 991px) {
+
+	/* ######
+	   BÁSICO
+	############ */
+
+	.hidden-991 {
+		display: none;
+	}
+
+	.box-slide.carrousel {
+		padding: 0;
+	}
+
+	/* ######
+	   NAVEGAÇÃO
+	############ */
+
+	#site-nav .box-accessibility {
+		margin: 10px 0 0;
+	}
+	#site-nav .box-accessibility a {
+		font-size: 0.625rem;
+	}
+	#site-nav .box-accessibility span.line {
+		margin: 0 5px;
+	}
+
+	/* btn-link */
+
+	#site-nav .btn-link {
+		text-align: right;
+	}
+	#site-nav .btn-link button {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 0;
+		background: url(../images/icons/white/menu.png) no-repeat center center;
+		background-size: contain;
+	}
+	#site-nav .btn-link button:focus {
+		outline: none;
+	}
+	#site-nav .btn-link button[aria-expanded="true"] {
+		width: 15vw;
+		height: 15vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		background: #FFF url(../images/icons/green/close.png) no-repeat center center;
+		background-size: 25px auto;
+	}
+
+	/* ######
+	   CABEÇALHO
+	############ */
+
+	#site-header .box-logo {
+		margin: 0 0 -15px;
+		padding: 15px 0;
+	}
+
+	/* navbar */
+
+	#site-nav .navbar {
+		text-align: right;
+		display: block;
+	}
+
+	/* navbar-collapse */
+
+	#site-header .navbar-collapse {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 888;
+		background: rgba(0, 0, 0, .85);
+	}
+	#site-header .navbar-collapse.show {
+		display: block;
+	}
+	#site-header .navbar .navbar-nav {
+		text-align: left;
+		width: 85vw;
+		height: 100vh;
+		padding: 40px;
+		overflow: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #4E8E47;
+	}
+	#site-header .box-nav .navbar-nav li {
+		display: block;
+		margin: 0 0 15px;
+	}
+	#site-header .navbar .nav-link.active ,
+	#site-header .navbar .nav-link:hover ,
+	#site-header .navbar .nav-link:focus ,
+	#site-header .navbar .nav-link {
+		color: #FFF;
+		font-size: 1rem;
+	}
+
+	/* dropdown-menu */
+
+	#site-header .box-nav .nav-hidden {
+		display: block;
+	}
+	#site-header .box-nav .dropdown-menu {
+		padding: 0 0 0 20px;
+		border-radius: 0;
+		border: none;
+		background: transparent;
+	}
+	#site-header .box-nav .dropdown-menu li {
+		margin: 0;
+	}
+	#site-header .box-nav .dropdown-item ,
+	#site-header .box-nav .dropdown-item:hover ,
+	#site-header .box-nav .dropdown-item:focus {
+		color: #FFF;
+		font-size: 1rem;
+		font-family: 'TradeGothic-Bold';
+		text-transform: uppercase;
+		display: inline-block;
+		margin: 0 0 15px;
+		padding: 0;
+		transition: .5s;
+		cursor: pointer;
+	}
+
+	/* ######
+	   RODAPÉ
+	############ */
+
+	/* box-link */
+
+	#site-footer .box-link a {
+		padding: 5px 10px 5px 45px;
+	}
+	#site-footer .box-link a::before {
+		left: -2px;
+	}
+
+	/* box-locale */
+
+	#site-footer .box-locale p {
+		font-size: 0.75rem;
+	}
+
+	/* ######
+	   PÁGINA INICIAL | CONTEÚDO
+	############ */
+
+	/* box-service */
+
+	.home #site-content .box-service .box-link a {
+		min-height: 115px;
+	}
+	.home #site-content .box-service .box-link li.first {
+		display: none;
+	}
+
+	/* box-news */
+
+	.home #site-content .box-news {
+		min-height: 380px;
+	}
+
+	/* box-featured */
+
+	.home #site-content .box-news .box-featured {
+		margin: 0 0 30px;
+	}
+	.home #site-content .box-news .box-featured h2 {
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	}
+
+	/* box-post */
+
+	.home #site-content .box-news .box-post h3 {
+		font-size: 1rem;
+		line-height: 1.375rem;
+	}
+
+	.home #site-content .box-info {
+		overflow: hidden;
+	}
+	.home #site-content .box-info img {
+		width: auto;
+		height: 174px;
+	}
+	.home #site-content .box-info h2 {
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	}
+
+	/* ######
+	   PÁGINA CIDADE | CONTEÚDO
+	############ */
+
+	/* box-item */
+
+	.page-cidade #site-content .box-item h2 {
+		font-size: 1.25rem;
+	}
+
+	/* ######
+	   PÁGINA INFRAESTRUTURA | CONTEÚDO
+	############ */
+
+	/* box-item */
+
+	.page-infraestrutura #site-content .box-item ul {
+		height: 85px;
+	}
+
+	/* bx-image */
+
+	.page-infraestrutura #site-content .bx-image {
+		display: none;
+	}
+
+	/* ######
+	   PÁGINA SECRETARIAS | CONTEÚDO
+	############ */
+
+	/* box-item */
+
+	.page-secretarias #site-content .box-item a {
+		min-height: 190px;
+	}
+	.page-secretarias #site-content .box-item h2 {
+		font-size: 1rem;
+		line-height: 1.25rem;
+	}
+
+}
+
+
+@media (max-width: 767px) {
+
+	/* ######
+	   BÁSICO
+	############ */
+
+	.hidden-767 {
+		display: none;
+	}
+
+	/* box-title */
+
+	.box-title h1 {
+		padding: 5px 10px;
+	}
+
+	/* slick-arrow */
+
+	.slick-arrow {
+		width: 15px;
+		height: 25px;
+		background-size: 40px auto;
+	}
+	.home .slick-prev {
+		left: 10px;
+	}
+	.home .slick-next {
+		right: 10px;
+	}
+
+	/* ######
+	   NAVEGAÇÃO
+	############ */
+
+	/* box-accessibility */
+
+	#site-nav .box-accessibility {
+		text-align: left;
+	}
+
+	/* ######
+	   RODAPÉ
+	############ */
+
+	/* box-logo */
+
+	#site-footer .box-logo {
+		text-align: center;
+		margin: 0 0 30px;
+	}
+
+	/* box-locale */
+
+	#site-footer .box-locale p {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	/* ######
+	   PÁGINA INICIAL - CONTEÚDO
+	############ */
+
+	/* box-link */
+
+	.home #site-content .box-service .box-link a {
+		min-height: auto;
+		padding: 20px;
+	}
+
+	/* box-news */
+
+	.home #site-content .box-news {
+		min-height: auto;
+		margin: 0 0 30px;
+	}
+
+	/* box-info */
+
+	.home #site-content .box-info {
+		background: #EBEBEB;
+	}
+	.home #site-content .box-info img {
+		width: 100%;
+		opacity: 0;
+	}
+	.home #site-content .box-info h2 {
+		color: #333;
+	}
+
+	/* ######
+	   PÁGINA DE SERVIÇOS - CONTEÚDO
+	############ */
+
+	/* box-subtitle */
+
+	.page-service #site-content .box-subtitle h1 {
+		font-size: 1.125rem;
+	}
+	.page-service #site-content .box-subtitle .icon {
+		width: 65px;
+		height: 40px;
+		background-size: contain;
+	}
+
+	/* ######
+	   PÁGINA CIDADE - CONTEÚDO
+	############ */
+
+	/* box-item */
+
+	.page-cidade #site-content .box-item {
+		min-height: auto;
+		margin: 0 0 30px;
+		padding: 50px 20px;
+	}
+
+}
+
+
+@media (max-width: 576px) {
+
+	/* ######
+	   GERAIS
+	############ */
+
+	.box-more a {
+		font-size: 1rem;
+	}
+
+	/* ######
+	   CABEÇALHO
+	############ */
+
+	/* box-logo */
+
+	#site-header .box-logo img {
+		max-width: 200px;
+	}
+
+	/* ######
+	   NAVEGAÇÃO
+	############ */
+
+	/* box-accessibility */
+
+	#site-nav .box-accessibility {
+		margin: 5px 0;
+	}
+	#site-nav .box-accessibility a {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+	#site-nav .box-accessibility span.line {
+		display: block;
+		height: 1px;
+		opacity: 0;
+	}
+
+	/* btn-link */
+
+	#site-nav .navbar {
+		text-align: right;
+		display: block;
+		padding: 10px 0 0;
+	}
+
+	/* ######
+	   RODAPÉ
+	############ */
+
+	/* box-locale */
+
+	#site-footer .box-locale p {
+		font-size: 0.625rem;
+		line-height: 1rem;
+		text-transform: uppercase;
+	}
+
+	/* ######
+	   PÁGINA INICIAL | CONTEÚDO
+	############ */
+
+	/* box-link */
+
+	.home #site-content .box-service .box-link h3 {
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	}
+	.home #site-content .box-service .box-link p {
+		font-size: 0.75rem;
+		line-height: 1.125rem;
+	}
+
+	/* box-post */
+
+	.home #site-content .box-news .box-post h3 {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	/* ######
+	   PÁGINA BLOG (PAI) | CONTEÚDO
+	############ */
+
+	/* box-form */
+
+	.blog #site-content .box-form input {
+		width: 100%;
+		margin: 0 0 15px;
+	}
+
+}

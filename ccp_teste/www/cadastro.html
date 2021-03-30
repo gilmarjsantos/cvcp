@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>CCP - Pindamonhangaba</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript" src="js/validacao.js"></script>
+ 
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+body,td,th {
+	color: #000000;
+	font-size: 12px;
+}
+-->
+        </style>
+
+    <style type="text/css">
+<!--
+.style13 {font-size: 14px}
+.style14 {font-size: 14px}
+.style15 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style16 {font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.style17 {font-size: 12em}
+-->
+    </style>
+    </head>
+    <body>
+    	
+
+    <!--Importando Script Jquery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    
+<div data-role="page" id="principal">
+        <div class="ui-header" data-role="header">
+             <table width="95%" border="0" align="center">
+               <tr>
+                 <td width="89%"><div align="center" class="style1" id="topo">
+                   <div align="left" id="topo_logo">
+                   <table width="90%" border="0" align="center">
+                   <tr>
+                   <td width="30%"><img src="images/logo-branco2.png" width="190" height="65"></td>
+                   <td width="70%"><div align="center">Cadastro de Veículos e Cargas Pesadas</div></td>
+                   </tr>
+                   </table>
+                   </div> <!-- Fecha aa div topo_logo  -->
+        </div> <!-- Fecha a div topo  --></td>
+               </tr>
+             </table>
+    </div>  <!-- Fecha a div header  -->
+        <div data-role="main" id="conteudo" class="ui-content" >
+	
+         <table width="99%" border="0" align="center">
+           <tr>
+             <td>
+			 <div id="selecionacategoria">
+			 <table width="99%" height="150" border="0" align="center">
+           <tr>
+             <td colspan="4"><div align="center" class="style14 style15">CADASTRO DE</div></td>
+           </tr>
+           <tr>
+             <td colspan="4"><div align="center" class="style16">MOTORISTA/REPRESENTANTE </div></td>
+           </tr>
+           <tr>
+             <td height="21" colspan="4">&nbsp;</td>
+           </tr>
+           <tr>
+           <td width="38%" align="right" valign="middle">&nbsp;</td>
+           <td width="13%" align="center" valign="middle"><input type="radio" name="Txtcategoria" value="1" id="txtcategoria1" onClick="ativa_cpf()"></td>
+           <td width="44%" align="left" valign="bottom">Pessoa Fisica</td>
+           <td width="5%" align="left" valign="middle">&nbsp;</td>
+           </tr>
+		   <tr>
+           <td align="right" valign="middle"><input  type="hidden" name="hiddenField1" id="hiddenField1" value="0"></td>
+           <td align="center" valign="middle"><input type="radio" name="Txtcategoria" value="2" id="txtcategoria2" onClick="ativa_cnpj()"></td>
+           <td align="left" valign="bottom">Pessoa Juridica</td>
+		   <td align="left" valign="middle">&nbsp;</td>
+		   </tr><!-- type="hidden" -->
+         </table>
+        </div>  
+<!-- <table width="99%" border="0" align="center">
+            <tr>
+              <td>&nbsp;</td>  --> 
+<div id="cadfisico">
+	<table width="100%" border="0" align="center">
+		<tr>
+<td><span class="style13">Nome</span></td>
+		</tr>
+		<tr> 
+<td><input name="txtnome1" type="text" id="txtnome1" style="font-size:12px" size="43" maxlength="60" onBlur="this.value=(this.value).toUperCase();"></td>
+		</tr>
+		<tr>
+<td><span class="style8"><div class="style13" id="rotulo01">CPF</div></span></td>
+		</tr>
+		<tr>
+<td><input name="txtcpfcnpj1" type="text" id="txtcpfcnpj1" size="14" maxlength="14" onBlur="valida()" onChange="Mascara(this,cpfCnpj)"></td>
+		</tr>
+		<tr>
+<td><span class="style8"><div class="style13" id="div">Número da CNH</div></span></td>
+		</tr>
+		<tr>
+<td><input name="txtnrcnh1" type="text" id="txtnrcnh1" size="18" maxlength="15"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Email</span>&nbsp;&nbsp;&nbsp;<span id="mensagem" style="font-size:14px; background-color:#CCFF33"></span></td>  
+		</tr>
+		<tr>
+<td><input name="txtemailpf" type="text" id="txtemailpf" size="43" maxlength="60" onBlur="mailtestf()"></td>
+		</tr>
+		<tr>
+<td width="93%"><span class="style13">Telefone</span></td>
+		</tr>
+		<tr>
+<td><input name="txttelefone1" type="text" id="txttelefone1" size="18"></td>
+		</tr> 
+		<tr>
+<td><span class="style8 style13">CEP</span></td>
+		</tr>
+		<tr>
+<td><input name="txtcep1" type="text" id="txtcep1" size="11" maxlength="11"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Endereço</span></td>
+		</tr>
+		<tr>
+<td><input name="txtlogradouro1" type="text" id="txtlogradouro1" size="43" maxlength="60"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Número</span></td>
+		</tr>
+		<tr>
+<td><input name="txtnumero1" type="text" id="txtnumero1" size="8" maxlength="8"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Complemento</span></td>
+		</tr>
+		<tr>
+<td><input name="txtcomplemento1" type="text" id="txtcomplemento1" size="18"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Bairro</span></td>
+		</tr>
+		<tr>
+<td><input name="txtbairro1" type="text" id="txtbairro1" size="43"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Cidade</span></td>
+		</tr>
+		<tr>
+<td><input name="txtcidade1" type="text" id="txtcidade1" size="18"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Estado</span></td>
+		</tr>
+		<tr>
+<td><input name="txtestado1" type="text" id="txtestado1" size="18"></td>
+		</tr>
+		<tr>
+<td><span class="style8 style13">Senha</span></td>
+		</tr>
+		<tr>
+<td><input name="txtsenha1" type="password" id="txtsenha1" size="18" maxlength="15"></td>
+		</tr>
+		<tr>
+<td><span class="style13">Confirmar senha</span></td>
+		</tr>
+		<tr>
+<td><input name="txtconfirmasenha1" type="password" id="txtconfirmasenha1" size="18" maxlength="15"></td>
+		</tr>
+	</table>
+</div>  <!--  Fecha a div cadfisico  -->          
+
+		  <!--   botoes  -->
+<div align="center" id = "btnspf">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+<td align="center" valign="middle" class="style13"><button name="btn1" type="button" id="btn1" onClick="cadastraPessoaFisica()"><span class="style13">Salvar</span></button>      </td>
+<td align="center" valign="middle"  class="style13"><button name="btn2" id="btn2" onClick="javascript:location.href='login.html'"><span class="style13">Voltar</span></button>
+</td>
+</tr>
+</table>
+</div>
+          <!--   botoes     -->
+		  
+<div id="cadjuridico">
+<table width="100%" border="0" align="center">
+<tr><td><span class="style13">Razão Social </span></td></tr>
+<tr><td><input name="txtnome2" type="text" id="txtnome2" style="font-size:12px" size="43" maxlength="60"></td></tr>
+<tr><td><span class="style8"><div class="style13" id="rotulo01">CNPJ</div></span><span class="style8"><div class="style13" id="rotulo02"></div></span></td></tr>
+<tr><td><input name="txtcpfcnpj2" type="text" id="txtcpfcnpj2" onBlur="valida()" onKeyPress="Mascara(this,cpfCnpj)" >&nbsp;</td></tr>
+<tr><td colspan="2"><span class="style13">Nome do Representante </span></td></tr>
+<tr><td colspan="2"><input name="txtrepresentante2" type="text" id="txtrepresentante2"  style="font-size:12px" size="43" maxlength="60"></td></tr>
+<tr><td colspan="2"><span class="style8"><span class="style13">CPF do Representante </span></span></td></tr>
+<tr><td colspan="2"><input name="txtcpfrepresentante2" type="text" id="txtcpfrepresentante2" onBlur="valida()" onKeyPress="Mascara(this,cpfCnpj)"></td></tr>
+<tr><td colspan="2"><span class="style8 style13">Email</span>&nbsp;&nbsp;&nbsp;<span id="mensagemj" style="font-size:14px; background-color:#CCFF33"></span></td></tr>
+<tr><td><input name="txtemailpj" type="text" id="txtemailpj" size="43" maxlength="60"  onBlur="mailtestj()"></td></tr>
+<tr><td><span class="style13">Telefone</span></td></tr>
+<tr><td><input name="txttelefone2" type="text" id="txttelefone2" size="18">&nbsp;</td></tr>
+<tr><td><span class="style8 style13">CEP</span></td></tr>
+<tr><td><input name="txtcep2" type="text" id="txtcep2" ></td></tr>
+<tr><td><span class="style8 style13">Endereço</span></td></tr>
+<tr><td><input name="txtlogradouro2" type="text" id="txtlogradouro2" size="43" maxlength="60"></td></tr>
+<tr><td><span class="style8 style13">Número</span></td></tr>
+<tr><td><input name="txtnumero2" type="text" id="txtnumero2" size="8" maxlength="8">&nbsp;</td></tr>
+<tr><td><span class="style8 style13">Complemento</span></td></tr>
+<tr><td><input name="txtcomplemento2" type="text" id="txtcomplemento2" size="18"></td></tr>
+<tr><td><span class="style8 style13">Bairro</span></td></tr>
+<tr><td><input name="txtbairro2" type="text" id="txtbairro2" size="43"></td></tr>
+<tr><td><span class="style8 style13">Cidade</span></td></tr>
+<tr><td><input name="txtcidade2" type="text" id="txtcidade2" size="18">&nbsp;</td></tr>
+<tr><td><span class="style8 style13">Estado</span></td></tr>
+<tr><td><input name="txtestado2" type="text" id="txtestado2" size="18"></td></tr>
+<tr><td><span class="style8 style13">Senha</span></td></tr>
+<tr><td><input name="txtsenha2" type="password" id="txtsenha2" size="18" maxlength="15">&nbsp;</td></tr>
+<tr><td><span class="style13">Confirmar senha</span></td></tr>
+<tr><td><input name="txtconfirmasenha2" type="password" id="txtconfirmasenha2" size="18" maxlength="15"></td></tr>
+</table>
+</div>
+		<!--  </div>   Fecha a div cadjuridico  -->
+		  
+		  <!--    botoes  -->
+		  
+<div align="center" id = "btnspj">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" valign="middle" class="style13"><button name="btn3" type="button" id="btn3" onClick="cadastraPessoaJuridica()"><span class="style13">Salvar</span></button></td>
+<td align="center" valign="middle"  class="style13"><button name="btn4" id="btn4" onClick="javascript:location.href='login.html'"><span class="style13">Voltar</span></button></td>
+</tr>
+</table>
+</div> <!--    fecha a div btnspj  -->
+		  
+		  <!--   botoes   -->
+	   
+					<div id="confirma_cadastro"> 
+					<table width="90%" border="0" align="center">
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td colspan="3"><div align="center" class="style14">C a d a s t r o &nbsp;&nbsp; c o n c l u í d o<br>
+						c o m &nbsp;&nbsp; s u c e s s o ! </div></td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td colspan="3">&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><label>
+							<div align="center">
+							<input type="button" name="button" value="Ir para a tela de Logon!" onClick="javascript:location.href='login.html'">
+							</div>
+							</label>
+						</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					</table>
+					</div>  <!-- Fecha div confirma cadastro  -->
+			 </td>
+           </tr>
+         </table>
+         <p>&nbsp;</p>
+    
+</div>		   
+        <div data-role="footer" id="rodape">
+          <div align="center">Av. Nossa Senhora do Bom Sucesso n. 1400, Alto do Cardoso
+            Pindamonhangaba / SP - CEP: 12420-010
+            CNPJ: 4522.6214/0001-19
+          </div>
+        </div>
+    
+        
+       
+<script type="text/javascript">
+		$("#txtcep1").focusout(function(){
+		
+		$string = $("#txtcep1").val();
+           $num = parseInt($string.match(/\d/g).join(''));
+			
+			$.ajax({
+			// 	url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+			   url: 'https://viacep.com.br/ws/'+$num+'/json/unicode/',
+				
+				dataType: 'json',
+				
+				success: function(resposta){
+					
+					$("#txtlogradouro1").val(resposta.logradouro);
+					$("#txtcomplemento1").val(resposta.complemento);
+					$("#txtbairro1").val(resposta.bairro);
+					$("#txtcidade1").val(resposta.localidade);
+					$("#txtestado1").val(resposta.uf);
+					
+					$("#txtnumero1").focus();
+				}
+			});
+		});
+	</script>  
+	
+	<script type="text/javascript">
+		$("#txtcep2").focusout(function(){
+		
+		$string2 = $("#txtcep2").val();
+           $num2 = parseInt($string2.match(/\d/g).join(''));
+			
+			$.ajax({
+		// 		url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+				url: 'https://viacep.com.br/ws/'+$num2+'/json/unicode/',
+				
+				dataType: 'json',
+				
+				success: function(resposta){
+					
+					$("#txtlogradouro2").val(resposta.logradouro);
+					$("#txtcomplemento2").val(resposta.complemento);
+					$("#txtbairro2").val(resposta.bairro);
+					$("#txtcidade2").val(resposta.localidade);
+					$("#txtestado2").val(resposta.uf);
+					
+					$("#txtnumero2").focus();
+				}
+			});
+		});
+	</script>  
+	    
+       <script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

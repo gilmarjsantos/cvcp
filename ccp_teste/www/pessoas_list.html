@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>CCP - Pindamonhangaba</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+   
+</head>
+    <body>
+    
+    <!--Importando Script Jquery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    
+    
+        <div data-role="page" id="principal">
+        <div data-role="header">
+             <table width="95%" border="0" align="center">
+               
+               <tr>
+                 <td width="89%"><div align="center" class="style3">
+                   <div align="left">
+                     <table width="90%" border="0" align="center">
+                       <tr>
+                         <td width="38%"><img src="images/logo-branco2.png" width="190" height="60"></td>
+                         <td width="62%">&nbsp;</td>
+                       </tr>
+                       <tr>
+                         <td colspan="2"><div align="center"><span class="style6">Cadastro de Veículos e Cargas Pesadas</span></div></td>
+                       </tr>
+                     </table>
+                   </div>
+                 </div></td>
+               </tr>
+             </table>
+             
+        </div>
+        <div data-role="main" id="conteudo" class="ui-content" >
+		
+	
+           <form action="cadastraPessoa()" method="post" enctype="application/x-www-form-urlencoded" name="frm_cad_pessoa" target="_self" id="frm_cad_pessoa">
+          <label>
+          <div align="center"><strong>Cadastro de Motorista/Representante</strong><br>
+          </div>
+          </label>
+          <table width="32%" border="0" align="center">
+            
+            <tr>
+              <td height="43" colspan="2">
+      <legend>Categoria de Pessoa: </legend> 
+             <input type="radio" name="Txtcategoria" value="Pessoa Fisica" id="txtcategoria">Fisica<input type="radio" name="Txtcategoria" value="Pessoa Juridica" id="txtcategoria">Juridica
+        </td>
+            </tr>
+            <tr>
+              <td colspan="2"><span class="style8">Nome ou Razão Social</span></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input name="txtnome" type="text" id="txtnome" size="43" maxlength="60"></td>
+            </tr>
+            <tr>
+              <td><span class="style8">CPF/CNPJ 
+                  <label></label>
+              </span>                <label></label></td>
+              <td><span class="style8">Número da CNH</span></td>
+            </tr>
+            <tr>
+              <td><input name="txtcpfcnpj" type="text" id="txtcpfcnpj" size="18" maxlength="15"></td>
+              <td>
+                 <input name="txtnrcnh" type="text" id="txtnrcnh" size="18" maxlength="15">              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><span class="style8">Email</span></td>
+            </tr>
+            <tr>
+              <td colspan="2"><label>
+                <input type="text" name="txtemail" id="txtemail" size="43" maxlength="60">
+              </label></td>
+            </tr>
+            <tr>
+              <td width="15%">Telefone</td>
+              <td width="34%"><label><span class="style8">CEP</span></label></td>
+            </tr>
+            <tr>
+              <td><label>
+                <input name="txttelefone" type="text" id="txttelefone" size="18">
+              </label></td>
+              <td><label>
+                <input name="txtcep" type="text" id="txtcep" size="11" maxlength="11">
+              </label></td>
+            </tr>
+            <tr>
+              <td><span class="style8">Endereço</span></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2"><input name="txtlogradouro" type="text" id="txtlogradouro" size="43" maxlength="60"></td>
+            </tr>
+            <tr>
+              <td><span class="style8">Número</span></td>
+              <td><label></label>
+                <span class="style8"><label></label>
+              </span>                <label><span class="style8">Complemento</span></label></td>
+            </tr>
+            <tr>
+              <td><input name="txtnumero" type="text" id="txtnumero" size="8" maxlength="8"></td>
+              <td>                
+              <input name="txtcomplemento" type="text" id="txtcomplemento" size="18">                </td>
+            </tr>
+            <tr>
+              <td><span class="style8">Cidade</span></td>
+              <td><span class="style8">Estado</span></td>
+            </tr>
+            <tr>
+              <td><label>
+                <input name="txtcidade" type="text" id="txtcidade" size="18">
+              </label></td>
+              <td><input name="txtestado" type="text" id="txtestado" size="18"></td>
+            </tr>
+            <tr>
+              <td><span class="style8">Bairro</span></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2"><label>
+                <input name="txtbairro" type="text" id="txtbairro" size="43">
+              </label></td>
+            </tr>
+            <tr>
+              <td><span class="style8">Senha</span></td>
+              <td>Confirmar senha</td>
+            </tr>
+            <tr>
+              <td><label>
+                <input name="txtsenha" type="password" id="txtsenha" size="18" maxlength="15">
+              </label></td>
+              <td><input name="txtconfirmasenha" type="password" id="txtconfirmasenha" size="18" maxlength="15"></td>
+            </tr>
+          </table>
+          <label><br>
+          </label>
+
+		  <table width="80%" border="0" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td><div align="center" id = "btns">
+	<!-- onClick="cadastraPessoa()" -->
+		    <button type="submit" name="btn1" id="btn1"  > Salvar </button>&nbsp;<button name="btn2" id="btn2"> Cancelar </button>&nbsp;<button name="btn3" id="btn3" type="reset"> Limpar </button>
+	      </div></td>
+          <td>&nbsp;</td>
+          </tr>
+</table>
+
+        </form> 
+       </div>
+		   
+        <div data-role="footer" id="rodape">
+Av. Nossa Senhora do Bom Sucesso n. 1400, Alto do Cardoso
+Pindamonhangaba / SP - CEP: 12420-010
+CNPJ: 4522.6214/0001-19
+          </div>
+    </div>
+        
+  <!--       <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>  -->
+        <script type="text/javascript" src="js/js.js"></script>
+     <!--    <script type="text/javascript" src="cordova.js"></script>  -->
+       
+<script type="text/javascript">
+		$("#txtcep").focusout(function(){
+			//Início do Comando AJAX
+			$.ajax({
+				//O campo URL diz o caminho de onde virá os dados
+				//É importante concatenar o valor digitado no CEP
+				url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+				//Aqui você deve preencher o tipo de dados que será lido,
+				//no caso, estamos lendo JSON.
+				dataType: 'json',
+				//SUCESS é referente a função que será executada caso
+				//ele consiga ler a fonte de dados com sucesso.
+				//O parâmetro dentro da função se refere ao nome da variável
+				//que você vai dar para ler esse objeto.
+				success: function(resposta){
+					//Agora basta definir os valores que você deseja preencher
+					//automaticamente nos campos acima.
+					$("#txtlogradouro").val(resposta.logradouro);
+					$("#txtcomplemento").val(resposta.complemento);
+					$("#txtbairro").val(resposta.bairro);
+					$("#txtcidade").val(resposta.localidade);
+					$("#txtestado").val(resposta.uf);
+					//Vamos incluir para que o Número seja focado automaticamente
+					//melhorando a experiência do usuário
+					$("#txtnumero").focus();
+				}
+			});
+		});
+	</script>       
+       
+</body>
+</html>

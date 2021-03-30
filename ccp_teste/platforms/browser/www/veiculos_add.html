@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>CCP - Pindamonhangaba</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/js.js"></script>
+	
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+body,td,th {
+	color: #000000;
+	font-size: 12px;
+}
+-->
+        </style>
+
+    <style type="text/css">
+<!--
+.style13 {font-size: 12px}
+.style14 {font-size: 14px}
+.style15 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style16 {font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.style17 {font-size: 12em}
+.style19 {font-size: 18px}
+-->
+    </style>
+</head>
+        
+    <body>
+       
+    
+        <div data-role="page" id="principal">
+        <div data-role="header">
+             <table width="95%" border="0" align="center">
+               
+               <tr>
+                 <td width="89%"><div align="center" class="style3">
+                   <div align="left">
+                     <table width="90%" border="0" align="center">
+                       <tr>
+                         <td width="38%"><img src="images/logo-branco2.png" width="190" height="60"></td>
+                         <td width="62%"><div align="center">Cadastro de Veiculos e Cargas Pesadas</div></td>
+                       </tr>
+                       <tr>
+                         <td colspan="2"></td>
+                       </tr>
+                     </table>
+                   </div>
+                 </div></td>
+               </tr>
+             </table>
+             
+        </div>
+        <div data-role="main" id="conteudo" class="ui-content">
+          <label>
+          <div align="center"><strong>Cadastro de Veículos</strong><br>
+          </div>
+          </label>
+		  <p><span id="Codigo"></span> </p>
+		  <p><span id="Nome"></span> </p>
+<table width="100%" border="0" align="center" bordercolor="#006600">
+            <tr>
+              <td width="60%" height="21" align="left" valign="middle"><span class="style11">
+			  <table width="100%" border="0" align="center">
+            
+            <tr>
+              <td width="48%" height="21" align="left" valign="middle"><span class="style11">Licenciado em </span></td>
+              <td width="9%" height="21" align="left" valign="middle"><input type="radio" name="txtlicpinda" value="1" id="txtlicpinda_0" onClick="licpinda_sim()"></td>
+              <td width="43%" align="left" valign="bottom"> Sim</td>
+            </tr>
+            <tr>
+              <td align="left" height="21"><span class="style11">Pindamonhangaba ? </span></td>
+              <td height="21" align="left" valign="middle"><input type="radio" name="txtlicpinda" value="2" id="txtlicpinda_1" onClick="licpinda_nao()"></td>
+              <td height="21" align="left" valign="bottom">Não</td>
+            </tr>
+			</table>
+			  </span></td>
+              <input name="placapinda"  id="placapinda"type="hidden" value="">
+			  <input name="txtcodpessoa"  id="txtcodpessoa"type="hidden" value="">
+              
+            </tr>
+</table>
+				
+		  <div id="licforadepinda">
+            
+            <table width="50%" border="0" align="center">
+            <tr>
+              <td><span class="style8">Placa</span></td>
+            </tr>
+            <tr>
+              <td><input name="txtplaca" type="text" id="txtplaca" onkeyup="maiuscula(this)" ></td>
+            </tr>
+            <tr>
+              <td><span class="style8">Max Toneladas</span></td>
+            </tr>
+            <tr>
+              <td><input name="txtmaxtoneladas" type="text" id="txtmaxtoneladas" size="3" maxlength="10"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+	     </div>	  <!--     Fecha div veiculos licenciados fora --> 
+		  <div id="licempinda">
+
+                   
+          <table width="50%" border="0" align="center">
+          <tr>
+             <td>&nbsp;</td>
+          </tr>
+          <tr>
+              <td><span class="style8">Renavan</span></td>
+          </tr>
+          <tr>
+              <td><input name="txtrenavan" type="text" id="txtrenavan" size="18" maxlength="30"></td>
+          </tr>
+            <tr>
+              <td>Espécie / Tipo</td>
+          </tr>
+          <tr>
+              <td><input name="txtespecie" type="text" id="txtespecie" size="18" maxlength="30"></td>
+          </tr>
+            <tr>
+              <td>Ano de Fabricação</td>
+          </tr>
+          <tr>
+              <td><input name="txtanoFab" type="text" id="txtanoFab" size="18" maxlength="30"></td>
+          </tr>
+          <tr>
+              <td>Marca / Modelo</td>
+          </tr>
+          <tr>
+              <td><label>
+                <input name="txtmarcamod" type="text" id="txtmarcamod" size="18" maxlength="30">
+              </label></td>
+          </tr>
+            <tr>
+              <td>Categoria:</td>
+          </tr>
+          <tr>
+              <td height="19">
+			<table width="100%" align="center">
+			  <tr>
+              <td align="right" class="style13">Particular</td>
+              <td><input type="radio" name="RadioCategoria" id="RadioCategoria1" value="1"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" class="style13">Aluguel</td>
+              <td height="24"><input type="radio" name="RadioCategoria" id="RadioCategoria2" value="2"></td>
+              <td height="24"><input name="txtcategoria" id="txtcategoria" type="hidden" value=""></td>
+            </tr>
+			</table>  			  
+              </td>
+            </tr>
+            			
+            <tr>
+              <td><input type="hidden" name="foto_nome" id="foto_nome" /></td> <!-- hidden  -->
+            </tr>
+            
+          </table>
+
+</div>
+	      <!--     fecha div veiculos licenciados em Pinda -->  
+          <label><br>
+          </label>
+<div id="area_foto">
+          <table width="50%" border="0" align="center">
+              <tr>
+              <td>&nbsp;</td>
+              </tr> 
+          <tr>
+              <td>
+            <div id="foto" class="margem-topo">
+				<div align="center"><img name="exibeFoto" id="exibeFoto"></div>
+				</div>   
+              </td>
+          </tr></table>
+		  <table width="80%" border="0" align="center">
+  <tr>    
+    <td><div align="center" id = "btnsv">
+		<button name="btn33" id="btn33" onClick="publicar()">Tirar foto do CRLV</button>
+	    </div></td>
+        </tr>
+        <tr>
+              <td>
+			  <div align="center" id="botaoenviarocrlv">
+              <button name="btnUpload" id="btnUpload" onClick="upload()">Enviar Foto</button>
+               </div>
+              </td>
+          </tr>
+              <tr>
+          <td><div align="center" id = "btnsv2">
+<button name="btn333" id="btn333" onClick="cadastraVeiculo()">Salvar</button></div></td>
+          </tr>
+</table>
+ 
+       </div>
+	   </div>
+	   <!-- começa a div confirma cadastro  -->
+<div id="confirma_cadastro_veiculo"> 
+	   <table width="90%" border="0" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    
+    >
+  </tr>
+  
+  <div id="msgsucesso01" align="center" class="style19">
+  <tr>
+    <td>&nbsp;</td>
+    </tr>
+    <td>
+    C a d a s t r o &nbsp;&nbsp; c o n c l u &iacute; d o<br>c o m &nbsp;&nbsp; s u c e s s o ! 
+        			 </td>
+                     </tr>
+         <tr>            
+		<td  colspan="3"><button name="btn558" id="btn558" onClick="javascript:location.href='login.html'">Voltar</button></td>
+       
+	</tr>
+     </div>
+		<tr>
+		<td><div id="msgsucesso02" align="center" class="style14"></div></td>
+    <td>&nbsp;</td>
+  </tr>
+        </table>
+        </div>
+<table width="50%" border="0" align="center">
+              <tr>
+              <td><button name="btn555" id="btn55" onClick="javascript:location.href='login.html'">Voltar</button>
+
+  
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    <!-- termina a div confirma cadastro veiculo  -->
+    <div data-role="footer" id="rodape">
+          <div align="center">Av. Nossa Senhora do Bom Sucesso n. 1400, Alto do Cardoso
+            Pindamonhangaba / SP - CEP: 12420-010  CNPJ: 4522.6214/0001-19</div>
+        </div>
+     <script type="text/javascript" src="cordova.js"></script> 
+       
+</body>
+</html>

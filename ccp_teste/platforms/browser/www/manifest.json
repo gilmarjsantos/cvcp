@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "CCP-PINDAMONHANGABA",
+  "short_name": "CCP-PINDAMONHANGABA",
+  "version": "com.ccp.pindamonhangaba",
+  "description": "Cadastro de cargas Pesadas.",
+  "author": "Gilmar Jesus dos Santos",
+  "icons": [],
+  "orientation": "any",
+  "start_url": "index.html"
+}

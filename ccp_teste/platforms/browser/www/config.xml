@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ccp.pindamonhangaba" version="3.3.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>CCP-PINDAMONHANGABA</name>
+    <description>
+        Cadastro de cargas Pesadas.
+    </description>
+    <author email="sistemas@Pindamonhangaba.sp.gov.br" href="http://www.pindamonhangaba.sp.gov.br">
+        Gilmar Jesus dos Santos
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="*" />
+    <preference name="orientation" value="default" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+</widget>

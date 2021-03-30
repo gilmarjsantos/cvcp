@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>CCP - Pindamonhangaba</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/js.js"></script>
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+body,td,th {
+	color: #000000;
+	font-size: 12px;
+}
+-->
+        </style>
+
+    <style type="text/css">
+<!--
+.style13 {font-size: 12px}
+.style14 {font-size: 14px}
+.style15 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style16 {font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.style17 {font-size: 12em}
+-->
+    </style>
+</head>
+        
+    <body>
+       
+    
+<div data-role="page" id="principal">
+        <div data-role="header">
+             <table width="95%" border="0" align="center">
+               
+               <tr>
+                 <td width="89%"><div align="center" class="style3">
+<div align="left">
+                     <table width="90%" border="0" align="center">
+                       <tr>
+                         <td width="38%"><img src="images/logo-branco2.png" width="190" height="60"></td>
+                         <td width="62%"><div align="center">Cadastro de Veículos e Cargas Pesadas</div></td>
+                       </tr>
+                       <tr>
+                         <td colspan="2"></td>
+                       </tr>
+                     </table>
+</div>
+                 </div></td>
+               </tr>
+             </table>
+             
+        </div>
+<div data-role="main" id="conteudo" class="ui-content">
+          <label>
+          <div align="center"><strong>Cadastro de Veículos</strong><br>
+          </div>
+          </label>
+		  <p><span id="Codigo"></span> </p>
+		  <p><span id="Nome"></span> </p>
+		  <table width="100%" border="0" align="center" bordercolor="#006600">
+            
+            <tr>
+              <td width="60%" height="21" align="left" valign="middle"><span class="style11"> </span></td>
+              <input name="placapinda"  id="placapinda"type="hidden" value="">
+			  <input name="txtcodpessoa"  id="txtcodpessoa"type="hidden" value="">
+              
+            </tr>
+		  </table>			
+<div id="lic_fora_de_pinda">
+            <table width="32%" border="0" align="center">
+            <tr><td>Licenciado em Pindamonhangaba ? </td></tr>
+            <tr><td><div id="licenciamento"> </div></td></tr>
+            <tr><td><span class="style8">Placa</span></td></tr>
+            <tr><td><div id="placa"> </div></td></tr>
+            <tr><td><span class="style8">Max Toneladas</span></td></tr>
+            <tr><td><div id="toneladas"> </div></td></tr>
+            <tr><td>&nbsp;</td></tr>
+            </table>
+</div>
+<div id="licempinda">
+            <table width="32%" border="0" align="center">
+            <tr><td><span class="style8">Renavan</span></td></tr>
+            <tr><td><div id="renavan"></div></td></tr>
+            <tr><td>Espécie / Tipo</td></tr>
+            <tr><td><div id="especie_tipo"> </div></td></tr>
+            <tr><td>Ano de Fabricação</td></tr>
+            <tr><td><div id="ano_fabrica"> </div></td></tr>
+            <tr><td>Marca / Modelo</td></tr>
+            <tr><td><div id="marca_modelo"></div></td></tr>
+            <tr><td>Categoria:</td></tr>
+			<tr><td height="19">
+			<tr><td>Categoria</td></tr>
+			<tr><td><div id="categoria"></div></td></tr>
+			<tr><td>CRLV</td></tr>
+            <tr><td><div id="foto" class="margem-topo"></div></td></tr>
+            <tr><td><div id="fotoDetalhes"></div></td></tr>
+            <tr><td>&nbsp;</td></tr> 
+            <tr><td>&nbsp;</td></tr> 
+            </table>
+</div>
+          <label><br>
+          </label>
+          
+<table width="80%" border="0" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+	    <div align="center" id = "btn_detalhes">
+		    <button name="btn5" id="btn5" onClick="javascript:location.href='login.html'">Voltar</button> 
+	    </div>
+    </td>
+    <td>&nbsp;
+	</td>
+  </tr>
+</table>
+ 
+       </div>
+	   
+	   <!-- começa a div confirma cadastro  -->
+  	      <div id="confirma_cadastro_veiculo"></div> 
+	   <!-- termina a div confirma cadastro veiculo  -->
+		   
+       
+        </div>
+    </div>
+
+      <div data-role="footer" id="rodape">
+          <div align="center">Av. Nossa Senhora do Bom Sucesso n. 1400, Alto do Cardoso
+            Pindamonhangaba / SP - CEP: 12420-010  CNPJ: 4522.6214/0001-19</div>
+        </div>
+     <script type="text/javascript" src="cordova.js"></script> 
+       
+</body>
+</html>
+
+<!-- 
+Calculo do Renavan
+
+Primeiro calcula-se a soma da multiplicação dos 4 primeiros dígitos por 5,4,3 e 2, respectivamente, Soma = (8*5)+(4*4)+(7*3)+(8*2); (RENAVAM antigo)
+Em seguida, dividi-se e multiplica-se por 11;
+Utiliza-se sempre o valor inteiro da divisão: Valor = (Soma/11)*11
+Por fim, subtraia o valor da soma;
+O resultado é igual a soma - valor
+Se resultado for igual à 1 ou 0, então o 1.º dígito verificador é 0;
+Caso contrário, o 1.º dígito verificador é o resultado da subtração de resultado de 11. Caso prático:
+RENAVAM: 00847897710 (com a nova regra e dígitos, a multiplicação dos 4 primeiros dígitos deverá acontecer da seguinte forma: (0*5)+(0*4)+(8*3)+(4*2))
+-->

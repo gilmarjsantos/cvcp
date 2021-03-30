@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>CCP - Pindamonhangaba</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/js.js"></script> 
+		<script type="text/javascript" src="js/autoriza_aetc.js"></script>
+
+           <style>
+        
+        .style3 {
+	color: #FFFF99;
+	font-size: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+        .style6 {color: #000000; font-weight: bold; }
+           </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+<!--
+.style12 {font-size: 10}
+d
+.style15 {color: #000000; font-size: 9px; }
+.style17 {color: #000000; font-size: 12px; }
+-->
+    </style>
+	
+	<style type="text/css">
+body {
+	background:#FFFFFF;
+	font:12px Arial, Verdana,  Helvetica, sans-serif;
+	text-align:center;
+	padding:0;
+	margin:0;
+	}
+#topo {
+	position:relative;
+	height:53px;
+	background:#1daecb url('topo-galeria.jpg') center no-repeat;
+	margin-bottom:30px;
+	}
+#topo h1, #topo h2 {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	position: absolute; 
+	 }
+.galeria {
+	width:165px; 
+	margin:0 auto;
+	text-align:left; 
+	}
+.img-aqui {
+	background: #FFFFFF url('foto00.jpg') center no-repeat;
+	width:500px;
+	height:260px;
+	position:relative;
+	top:700px;
+	float:right;
+	border:1px solid #FFFFFF;
+	left: 200px;
+	}
+ul.fotos {
+	position:relative;
+	list-style:none;  
+	width:100px;
+	height: 0;
+	padding:1px;
+	background:#999;
+	margin:0; 
+	padding:0; 
+}
+.fotos:after {
+	display: block;
+	content: ".";
+	height: 0;
+	font-size:0; 
+	visibility: hidden;
+	clear: both;
+	}
+ul.fotos li {
+	width:50px;
+	height:30px;
+	float:left; 
+	border:2px solid #444;
+	margin:1px; 
+}
+ul.fotos li img {
+	border:none; 
+	width:50px;
+	height:30px;
+}
+ul.fotos li span img {
+	border:none;
+	width:350px;
+	height:190px;
+	height:auto;
+}
+ul.fotos a {
+	display: block;
+	} 
+ul.fotos a span {
+	display: none;
+}
+ul.fotos a:hover span.legenda {
+	display: block;
+	text-align:center; 
+	width:500px;
+	position:absolute;
+	top:375px;
+	left:-2px;
+}
+ul.fotos a:hover span {
+	display: block;
+    position: relative; 
+	top:-3px; 
+	left: -50px; 
+	background:#FFFFFF;
+	border:2px solid #666;
+   }
+ul.fotos a:hover span.legenda {
+	padding:5px 0;
+	color:#333; 
+}
+#rodape {
+	background:#1daecb url('rodape-galeria.jpg') center repeat-x; 
+	height:30px;
+	margin:30px 0; 
+	color:#fff; 
+	text-align:right; 
+	font-size:80%; 
+	padding-right:10px;
+	}
+</style>
+<!--[if lte IE 6]>
+<style type="text/css">
+ul.fotos {
+	width:164px;
+	padding:  2px 0 1px 0;
+	}
+ul.fotos li {
+	margin-top:0; 
+}
+/* Fixes for IE */
+/* Fix IE. Hide from IE Mac \*/
+ul.fotos li { float: left; height: 1%; }
+ul.fotos li a { height: 1%; }
+/* End */
+ul.fotos a:hover {
+	text-decoration:none;
+	background: none; 
+	} 
+ul.fotos li {width:75px;}
+ul.fotos a:hover span.legenda {width:300px;}
+</style>
+<![endif]-->
+<script type="text/javascript" async="" src="js/mixpanel-2-latest.min.js.download"></script>
+</head>
+        <title>CCP - Pindamonhangaba</title>
+    <body>
+       
+    
+        <div data-role="page" id="principal">
+        <div data-role="header">
+             <table width="95%" border="0" align="center">
+               <tr>
+                 <td width="89%"><div align="center" class="style3">
+                       <div align="left">
+                     <table width="90%" border="0" align="center">
+                       <tr>
+                         <td width="30%"><img src="images/logo-branco2.png" width="190" height="60"></td>
+                         <td width="70%"><div align="center" class="style17">Controle de Veículos e Cargas Pesadas</div></td>
+                       </tr>
+                       <tr>
+                         <td colspan="2"></td>
+                       </tr>
+                     </table>
+                       </div>  <!-- Final da div da linha 52   -->
+        </div> <!-- Final da div header  --> </td>  
+               </tr>
+             </table>
+             
+        </div><!-- Final da div header   --> 
+        <div data-role="main" id="conteudo" class="ui-content" >
+	
+<div id="tela_fiscal">		
+	<div id="mostra_user">
+          
+			<span class="style8" id="Codigo"></span> 
+		    <span class="style8" id="Nome"></span> 
+			
+					 
+    </div>
+	<div id="fiscalizacao">
+    <table width="80%" border="0" align="center">
+  <tr>
+    <td colspan="3" class="style6"><div align="center">Formulário de Autorização</div></td>
+  </tr>
+   </table>
+   <span id="exibir_galeria"> </span>
+   <!-- 
+   <table width="75%" border="0" align="center">
+  <tr>
+    <td align="center" height="80" colspan="3">
+	<div id="galeria" class="galeria">
+<ul class="fotos"> 
+	<li><a href="#"><img src="http://179.131.10.28/ccp_pmpinda/uploads/dZspviyoSTW5E8SIhT8pn8lV2UbImDhLz3tBmRAi67bJRf2QzRnhwdg.jpg" alt=""><span><img src="http://179.131.10.28/ccp_pmpinda/uploads/dZspviyoSTW5E8SIhT8pn8lV2UbImDhLz3tBmRAi67bJRf2QzRnhwdg.jpg" alt=""></span></a></li>
+
+	<li><a href="#"><img src="http://179.131.10.28/ccp_pmpinda/uploads/1tUVg8SL4JVCX0udUTTFTiskkFtduaOlc3hTV1pX6ixqI8xdTRHGOgE.jpg" alt=""><span><img src="http://179.131.10.28/ccp_pmpinda/uploads/1tUVg8SL4JVCX0udUTTFTiskkFtduaOlc3hTV1pX6ixqI8xdTRHGOgE.jpg" alt=""></span></a></li>
+</ul>
+</div>	</td>
+    </tr>
+ </table> -->
+
+ <table width="75%" border="0" align="center"> 
+  <tr><td colspan="3">
+       <div id="topo_adm">     
+          <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="style17">
+           <tr>
+      <td width="10%"><div align="center"><span class="style17">Nr AETC</span></div></td>
+      <td width="30%"><div align="center"><span class="style17">Placa</span></div></td>
+      <td width="30%"><div align="center"><span class="style12">Data Evento</span></div></td>
+	  <td width="30%"><div align="center"><span class="style12">Exibir</span></div></td>
+          </tr>
+           </table>
+     </div>
+       <!-- div topo  -->
+       
+       <!-- 	</div>  --> 
+       <!-- div conteudo  --> 
+
+       <div id="lista_adm" style="margin-bottom: 50px;">  </div></td>
+  </tr>
+ 
+    <tr><td>&nbsp;</td>
+    <td><!-- <button type="button" data-icon="check" id="btnfiscal" name="btnfiscal" onClick="limpar()" style="width:90%; margin-left: auto;margin-right: auto"><span id="titbtn"></span></button> --> </td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr><td>&nbsp;</td>
+    <td><div id="botao_voltar">
+	<button type="button" data-icon="check" name="btn515" id="btn515" onClick="javascript:location.href='login.html'" style="width:90%; margin-left: auto;margin-right: auto">Voltar</button>
+	    </div></td>
+    <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <td colspan="3">
+      <div id="detalhes_veiculos"> 
+	  <!--  Aqui vai exibir os detalhes do veiculo clicado na lista  -->
+	   <span id="ficha_veiculos"></span>       </div>      </td>
+      </tr>
+</table>
+    		
+	</div>  <!-- div fiscalização -->
+
+
+</div> <!-- div tela fiscal  -->
+<!-- topo e lista -->
+
+<span id="Mostra_AETC"> </span>
+<span id="exibir_fotos"> </span>
+ 
+
+</div> <!-- div conteudo  --> 
+<!-- 
+
+                 <div data-role="footer" id="rodape">
+          <div align="center">Av. Nossa Senhora do Bom Sucesso n. 1400, Alto do Cardoso
+            Pindamonhangaba / SP - CEP: 12420-010
+            CNPJ: 4522.6214/0001-19
+          </div>
+               </div>
+-->
+    </div>   <!-- div principal  -->
+       <script src="cordova.js"></script>
+</body>
+</html>

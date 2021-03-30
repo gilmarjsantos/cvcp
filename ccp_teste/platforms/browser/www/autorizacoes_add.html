@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>CCP - Pindamonhangaba</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<!-- <script src="js/js.js"></script>  --> 
+		<script src="js/autorizacoes.js"></script>
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+body,td,th {
+	color: #000000;
+	font-size: 12px;
+}
+-->
+        </style>
+
+    <style type="text/css">
+<!--
+.style13 {font-size: 12px}
+.style14 {font-size: 14px}
+.style15 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style16 {font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.style17 {font-size: 12em}
+-->
+    </style>
+</head>
+        
+    <body>
+       
+    
+         <div data-role="page" id="principal">
+         <div data-role="header">
+             <table width="95%" border="0" align="center">
+               
+               <tr>
+                 <td width="89%"><div align="center" class="style3">
+                   
+                     <table width="90%" border="0" align="center">
+                       <tr>
+                         <td width="38%"><img src="images/logo-branco2.png" width="190" height="60"></td>
+                         <td width="62%"><div align="center">Cadastro de Cargas Pesadas</div></td>
+                       </tr>
+                       <tr>
+                         <td colspan="2"></td>
+                       </tr>
+                     </table>
+                 
+                 </div></td>
+               </tr>
+             </table>
+             
+        </div>
+        <div data-role="main" id="conteudo" class="ui-content">
+          <label>
+          <div align="center"><strong>Solicitação de A.E.T.C</strong><br>
+          </div>
+          </label>
+		  <p><span id="Codigo"></span>  </p>
+		  <p><span id="Nome"></span> </p>
+			
+		  
+            
+            <table width="32%" border="0" align="center">
+            <tr><td><span class="style8">Placa</span></td></tr>
+            <tr><td><label>
+                <div align="center">
+				<span id="Selecao"> </span>
+              </label></div>
+			<input name="hiddenplaca" type="hidden" id="hiddenplaca" size="10">
+              </td>
+			  <td>&nbsp;</td>
+              </tr>
+            <!--  <div id="dados_AETC">   -->
+            <tr><td><span class="style8">Tipo de A.E.T.C. </span></td></tr>
+            <tr>
+              <td><table width="100%" align="center">
+			  <tr>
+              <td align="right" class="style13">Normal</td>
+              <td><input type="radio" name="RadioTipoAETC" id="RadioTipoAETC_1" value="1"></td>
+              <td>&nbsp;</td></tr>
+            <tr>
+              <td align="right" class="style13">Especial</td>
+              <td height="24"><input type="radio" name="RadioTipoAETC" id="RadioTipoAETC_2" value="2"></td>
+              <td height="24"><input name="txtTipoAETC" id="txtTipoAETC" type="hidden" value=""></td>
+            </tr>
+			</table></td>
+            </tr>
+          </table>
+		
+
+          <table width="32%" border="0" align="center">
+               
+            <tr>
+              <td><span class="style8">CNH do Motorista </span></td>
+            </tr>
+            <tr>
+              <td><label>
+                <input name="texcnhmotorista" type="text" id="texcnhmotorista" placeholder="CNH do Motorista">
+              </label></td>
+            </tr>
+            <tr>
+              <td>Data do Evento </td>
+            </tr>
+            <tr>
+              <td><label>
+                <input type="date" name="textdataevento" id="textdataevento">
+              </label></td>
+            </tr>
+           <!--  <tr>
+              <td>Hora do Evento </td>
+            </tr> --> 
+            <tr>
+              <td><label>
+                <input type="hidden" name="texthoraevento" id="texthoraevento" value="00:00">
+              </label></td>
+            </tr>
+            <tr>
+              <td>Peso Máx. em toneladas(Composição) </td>
+            </tr>
+            <tr>
+              <td><label>
+              <input type="text" name="textpeso" id="textpeso" placeholder="Peso Máx. em toneladas(Composição)">
+              </label></td>
+            </tr>
+            <tr>
+              <td>Nota Fiscal ou Romaneio </td>
+            </tr>
+            <tr>
+              <td height="19">
+              <div align="center"><button type="button" name="btnenviaclrv" id="btnenviaclrv" onClick="publicar()">Tirar Foto</button></div></td>
+            </tr>
+            <tr>
+              <td height="19">
+			  <input type="hidden" name="foto_nota" id="foto_nota" />
+			 <!--  <div id="fotonota"></div>  --> 
+			  </td>
+            </tr>
+			<td><span id="pub"> </span> </td>
+            <tr>
+              <td height="19"><div align="center"><p><button type="button" data-icon="check" id="btnUpload" onClick="uploadNF()" style="width:90%; margin-left: auto;margin-right: auto">Enviar Foto</button></p></div></td>
+            </tr>
+            
+            <tr>
+              <td></td>
+            </tr>
+            
+            <tr>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>  </td>
+            </tr>
+			
+            <tr>
+              <td>  </td>
+            </tr>
+            <tr>
+              <td> </td>
+            </tr> 
+			<tr>
+              <td>  </td>
+            </tr>
+            <tr>
+              <td>   </td>
+            </tr> 
+          </table>
+    </div>
+          <label><br>
+          </label>
+          
+		  <table width="80%" border="0" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td><div align="center" id = "btnsv">
+		 <button name="btn3" id="btn36" onClick="cadastroaetc()">Salvar</button>&nbsp;<button name="btn56" id="btn5" onClick="javascript:location.href='login.html'">Voltar</button> 
+	      </div></td>
+          <td>&nbsp;</td>
+          </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+ 
+     	   
+	   <!-- come�a a div confirma cadastro  -->
+  	      <div id="confirma_autorizacao"></div> 
+	   <!-- termina a div confirma cadastro veiculo  -->
+
+
+      <div data-role="footer" id="rodape">
+          <div align="center">Av. Nossa Senhora do Bom Sucesso n. 1400, Alto do Cardoso
+            Pindamonhangaba / SP - CEP: 12420-010  CNPJ: 4522.6214/0001-19</div>
+    </div>
+     <script type="text/javascript" src="cordova.js"></script> 
+       
+</body>
+</html>
+
+<!-- 
+Calculo do Renavan
+
+Primeiro calcula-se a soma da multiplica��o dos 4 primeiros d�gitos por 5,4,3 e 2, respectivamente, Soma = (8*5)+(4*4)+(7*3)+(8*2); (RENAVAM antigo)
+Em seguida, dividi-se e multiplica-se por 11;
+Utiliza-se sempre o valor inteiro da divis�o: Valor = (Soma/11)*11
+Por fim, subtraia o valor da soma;
+O resultado � igual a soma - valor
+Se resultado for igual � 1 ou 0, ent�o o 1.� d�gito verificador � 0;
+Caso contr�rio, o 1.� d�gito verificador � o resultado da subtra��o de resultado de 11. Caso pr�tico:
+RENAVAM: 00847897710 (com a nova regra e d�gitos, a multiplica��o dos 4 primeiros d�gitos dever� acontecer da seguinte forma: (0*5)+(0*4)+(8*3)+(4*2))
+-->

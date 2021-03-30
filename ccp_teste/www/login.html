@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>CCP-Login</title>
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/js.js"></script>
+      
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+    <body>
+	
+					<!-- AS DIV UTILIZADAS					-->
+					<!-- <div id="botoes_usuario">			-->
+					<!-- <div id="botoes_fiscal">			-->
+					<!-- <div id="botoes_autoriza">			-->
+	
+	
+  <div data-role="page" id="principal">
+         <div data-role="header">
+         <table width="95%" border="0" align="center">
+         <tr>
+         <td width="89%">
+             <div align="center" class="style1"> 
+               <div id="logotipo" align="left">
+               <table width="90%" border="0" align="center">
+               <tr>
+               <td width="38%"><img src="images/logo-branco2.png" width="190" height="65"></td>
+               <td width="62%">
+                 <div align="center">
+                 Cadastro de Veículos e Cargas Pesadas
+                 </div></td>
+               </tr>
+               <tr>
+               <td height="2" colspan="2"></td>
+               </tr>
+               </table>
+               </div>  
+             </div></td>
+               </tr>
+               </table>
+          </div>  
+
+        <div data-role="main" id="conteudo" class="ui-content">
+            
+               <div align="center" id="logon">
+               <table width="70%" border="0" align="center">
+			   <tr>
+               <td align="center"> </td>
+               </tr>
+               <tr>
+               <td align="center"> <h2>L o g i n</h2></td>
+               </tr>
+               
+               <tr>
+               <td align="center"><label for="usuario" class="style1">Email:</label>
+               <input name="usuario" type="email" class="style5" id="usuario"></td>
+			   </tr>
+			   <tr>
+               <td align="center">
+               <label for="senha">Senha:</label>
+               <input name="senha" type="password" class="pop" id="senha"></td>
+               </tr>
+               <tr>
+               <td align="center"><button data-icon="check" type="button" onClick="verificaUsuario()" id="enviar" class="style1">Entrar</button>                </td>
+			   <tr>
+			   <td  align="center">
+               <button data-icon="edit" type="button" id="cadastro" onClick="javascript:location.href='cadastro.html'" class="style1">Ainda não tenho cadastro</button> </td>
+               </tr>
+               </table>
+               </div>
+			<div id="ocultar"> 
+            <table width="60%" border="0" align="center">
+            <tr>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td><label></label><div align="center" class="style1">C o n e c t a n d o ........... </div></td>
+            </tr>
+            <tr>
+            <td><div align="center"><p>&nbsp;</p>
+            </div></td>
+            </tr>
+            <tr>
+            <td>
+            <div align="center"><p>&nbsp;</p></div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <div align="center"><p>&nbsp;</p></div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <div align="center"><p>&nbsp;</p></div>
+            </td>
+            </tr>
+            </table>
+		    </div>
+   
+            <div id="user">
+			<span class="style8" id="Codigo"></span> 
+		    <span class="style8" id="Nome"></span>
+            </div>
+										<div id="botoes_usuario">         
+ <!-- BOTAO CONSULTA ALTERA DADOS -->
+<div id="botao_consulta_altera">
+<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td>&nbsp;</td>
+<td><button type='button' data-icon="gear"  id="btn02" onClick="javascript:location.href='cadastro_edit.html'" 
+style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Consultar/Alterar  dados</span></button></td>
+<td>&nbsp;</td>
+</tr>
+</table>  
+</div>    
+
+            <!-- BOTAO CADASTRAR VEICULOS -->
+            <div id="botao_cadastrar_veiculos">
+            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">  
+            <tr>
+            <td>&nbsp;</td>
+            <td><button type='button' data-icon="plus" id="btn03" onClick="javascript:location.href='veiculos_add.html'" 
+            style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Cadastrar Veículos</span></button></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            </div>
+        <!-- BOTAO CONSULTAR VEICULOS -->
+        <div id="botao_consultar_veiculos">
+        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+        <td>&nbsp;</td>
+        <td><button type='button' data-icon="search" id="btn04" onClick="javascript:location.href='veiculos_list.html'" 
+        style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Consultar Veículos</span></button></td>
+        <td>&nbsp;</td>
+        </tr>
+        </table>
+        </div>
+  <!-- BOTAO CONSULTAR AUTORIZACOES -->
+  <div id="botao_consultar_autorizacoes">
+  <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  <td>&nbsp;</td>
+  <td><button type='button' data-icon="search" id="btn05" onClick="javascript:location.href='veiculos_consulta_autorizacoes.html'" 
+  style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Consultar Autorizações</span></button></td>
+  <td>&nbsp;</td>
+  </tr>
+  </table>
+  </div>
+  
+  										</div> <!--  FECHA DIV DE USUARIO   -->
+										<div id="botoes_fiscal">
+                    <!-- BOTAO FISCALIZACAO -->  
+                    <div id="botao_fiscaliza">
+                    <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td>&nbsp;</td>
+                    <td><button type='button' data-icon="plus" id="btn06" onClick="javascript:location.href='veiculos_fiscal.html'" 
+                    style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Fiscalização</span></button></td>
+                    <td>&nbsp;</td>
+                    </tr>
+                    </table>
+                    </div>
+										</div>  <!-- FECHA A DIV DE FISCAL  -->	
+										<div id="botoes_autoriza">								
+         <!-- BOTAO AUTORIZAR AETC -->
+         <div id="botao_autoriza">
+         <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+         <tr>
+         <td>&nbsp;</td>
+         <td><button type='button' data-icon="plus" id="btn07" onClick="javascript:location.href='veiculos_autoriza_aetc.html'" 
+         style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Autorização</span></button></td>
+         <td>&nbsp;</td>
+         </tr>
+         </table>
+         </div>
+										</div> <!--   FECHA A DIV AUTORIZA  -->		 	
+                <!-- BOTOES  -->
+                <div id="botao_botoes">                  
+                <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                <td>&nbsp;</td>
+                <td><button type='button' data-icon="power" id="btnSair" onClick="sair()" style="width:90%; margin-left: auto;margin-right: auto"><span class="style12">Sair                </span></button></td>
+                <td>&nbsp;</td>
+                </tr>
+               </table>
+               </div>				  
+      </div>     
+           
+              
+    <div data-role="footer" id="rodape">
+          <div align="center">Av. Nossa Senhora do Bom Sucesso n. 1400, <br>Alto do Cardoso
+Pindamonhangaba / SP - CEP: 12420-010
+<br>CNPJ: 4522.6214/0001-19</div>
+
+    </div>  <!-- Fecha rodape -->
+
+        <script src="cordova.js"></script>
+    
+    </body>
+
+</html>
+
